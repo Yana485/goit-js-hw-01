@@ -5,7 +5,11 @@ let padding;
 let border;
 
 function getElementWidth(content, padding, border) {
-    const fullWidth = content + (padding * 2) + (border * 2);
+    const contentWidth = Number.parseFloat(content);
+    const paddingWidth = Number.parseFloat(padding);
+    const borderWidth = Number.parseFloat(border);
+
+    const fullWidth = contentWidth + paddingWidth * 2 + borderWidth * 2;
     return fullWidth;
 }
 
